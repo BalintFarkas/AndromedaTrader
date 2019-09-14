@@ -1,11 +1,10 @@
-﻿using System;
+﻿using AndromedaScaffold.WorkerRole.AndromedaServiceReference;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using AndromedaScaffold.WorkerRole.AndromedaServiceReference;
-using System.Configuration;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
-namespace AndromedaScaffold.WorkerRole
+namespace AndromedaScaffold
 {
     /// <summary>
     /// This class represents the ship's onboard computer.
@@ -34,28 +33,25 @@ namespace AndromedaScaffold.WorkerRole
         /// <summary>
         /// Queries the status of the ship.
         /// </summary>
-        /// <returns></returns>
-        public static Spaceship GetShipStatus()
+        public static Task<Spaceship> GetSpaceshipStatusAsync()
         {
-            return client.GetSpaceshipStatus(CommandedShip);
+            return client.GetSpaceshipStatusAsync(CommandedShip);
         }
 
         /// <summary>
         /// Queries the star the ship is on.
         /// </summary>
-        /// <returns></returns>
-        public static Star GetCurrentStar()
+        public static Task<Star> GetCurrentStarAsync()
         {
-            return client.GetCurrentStar(CommandedShip);
+            return client.GetCurrentStarAsync(CommandedShip);
         }
 
         /// <summary>
         /// Queries the stars that the ship can see on its sensors.
         /// </summary>
-        /// <returns></returns>
-        public static List<Star> GetVisibleStars()
+        public static Task<Star[]> GetVisibleStarsAsync()
         {
-            return client.GetVisibleStars(CommandedShip);
+            return client.GetVisibleStarsAsync(CommandedShip);
         }
 
         /// <summary>
@@ -63,13 +59,11 @@ namespace AndromedaScaffold.WorkerRole
         /// If the operation is unsuccessful (for example if you chose a star
         /// that is too distant), it returns the detailed description of the error.
         /// </summary>
-        /// <param name="destination"></param>
-        /// <returns></returns>
-        public static string LaunchSpaceship(Star destination)
+        public static async Task<string> LaunchSpaceshipAsync(Star destination)
         {
             try
             {
-                client.LaunchSpaceship(CommandedShip, destination.StarGuid);
+                await client.LaunchSpaceshipAsync(CommandedShip, destination.StarGuid);
                 return string.Empty;
             }
             catch (Exception ex)
@@ -84,14 +78,11 @@ namespace AndromedaScaffold.WorkerRole
         /// returns the detailed description of the error.
         /// Don't forget to update the ship's status using the GetShipStatus() method after the transaction!
         /// </summary>
-        /// <param name="commodityName"></param>
-        /// <param name="quantity"></param>
-        /// <returns></returns>
-        public static string Buy(string commodityName, int quantity)
+        public static async Task<string> BuyAsync(string commodityName, int quantity)
         {
             try
             {
-                client.Buy(CommandedShip, commodityName, quantity);
+                await client.BuyAsync(CommandedShip, commodityName, quantity);
                 return string.Empty;
             }
             catch (Exception ex)
@@ -107,14 +98,11 @@ namespace AndromedaScaffold.WorkerRole
         /// returns the detailed description of the error.
         /// Don't forget to update the ship's status using the GetShipStatus() method after the transaction!
         /// </summary>
-        /// <param name="commodityName"></param>
-        /// <param name="quantity"></param>
-        /// <returns></returns>
-        public static string BuyMaximum(string commodityName)
+        public static async Task<string> BuyMaximumAsync(string commodityName)
         {
             try
             {
-                client.BuyMaximum(CommandedShip, commodityName);
+                await client.BuyMaximumAsync(CommandedShip, commodityName);
                 return string.Empty;
             }
             catch (Exception ex)
@@ -128,14 +116,12 @@ namespace AndromedaScaffold.WorkerRole
         /// If the operation is unsuccessful (for example if you have less than the amount you tried to sell), it 
         /// returns the detailed description of the error.
         /// Don't forget to update the ship's status using the GetShipStatus() method after the transaction!
-        /// <param name="commodityName"></param>
-        /// <param name="quantity"></param>
-        /// <returns></returns>
-        public static string Sell(string commodityName, int quantity)
+        /// </summary>
+        public static async Task<string> SellAsync(string commodityName, int quantity)
         {
             try
             {
-                client.Sell(CommandedShip, commodityName, quantity);
+                await client.SellAsync(CommandedShip, commodityName, quantity);
                 return string.Empty;
             }
             catch (Exception ex)
@@ -152,12 +138,11 @@ namespace AndromedaScaffold.WorkerRole
         /// returns the detailed description of the error.
         /// Don't forget to update the ship's status using the GetShipStatus() method after the transaction!
         /// </summary>
-        /// <returns></returns>
-        public static string AddDrive()
+        public static async Task<string> AddDriveAsync()
         {
             try
             {
-                client.AddDrive(CommandedShip);
+                await client.AddDriveAsync(CommandedShip);
                 return string.Empty;
             }
             catch (Exception ex)
@@ -174,12 +159,11 @@ namespace AndromedaScaffold.WorkerRole
         /// returns the detailed description of the error.
         /// Don't forget to update the ship's status using the GetShipStatus() method after the transaction!
         /// </summary>
-        /// <returns></returns>
-        public static string RemoveDrive()
+        public static async Task<string> RemoveDriveAsync()
         {
             try
             {
-                client.RemoveDrive(CommandedShip);
+                await client.RemoveDriveAsync(CommandedShip);
                 return string.Empty;
             }
             catch (Exception ex)
@@ -199,12 +183,11 @@ namespace AndromedaScaffold.WorkerRole
         /// Don't forget to call GetShipStatus() and GetVisibleStars() to update the ship's status and check
         /// the new stars you can see after the transaction!
         /// </summary>
-        /// <returns></returns>
-        public static string AddSensor()
+        public static async Task<string> AddSensorAsync()
         {
             try
             {
-                client.AddSensor(CommandedShip);
+                await client.AddSensorAsync(CommandedShip);
                 return string.Empty;
             }
             catch (Exception ex)
@@ -224,12 +207,11 @@ namespace AndromedaScaffold.WorkerRole
         /// Don't forget to call GetShipStatus() and GetVisibleStars() to update the ship's status and the list of 
         /// stars you can see after the transaction!
         /// </summary>
-        /// <returns></returns>
-        public static string RemoveSensor()
+        public static async Task<string> RemoveSensorAsync()
         {
             try
             {
-                client.RemoveSensor(CommandedShip);
+                await client.RemoveSensorAsync(CommandedShip);
                 return string.Empty;
             }
             catch (Exception ex)
@@ -245,12 +227,11 @@ namespace AndromedaScaffold.WorkerRole
         /// All other parameters of the ship remain unaffected, so all existing cargo and components
         /// (such as sensors, drives and so on) are untouched.
         /// </summary>
-        /// <returns></returns>
-        public static string UpgradeShipCapacityTo200()
+        public static async Task<string> UpgradeShipCapacityTo200Async()
         {
             try
             {
-                client.UpgradeShip(CommandedShip, 1);
+                await client.UpgradeShipAsync(CommandedShip, 1);
                 return string.Empty;
             }
             catch (Exception ex)
@@ -266,12 +247,11 @@ namespace AndromedaScaffold.WorkerRole
         /// All other parameters of the ship remain unaffected, so all existing cargo and components
         /// (such as sensors, drives and so on) are untouched.
         /// </summary>
-        /// <returns></returns>
-        public static string UpgradeShipCapacityTo300()
+        public static async Task<string> UpgradeShipCapacityTo300Async()
         {
             try
             {
-                client.UpgradeShip(CommandedShip, 2);
+                await client.UpgradeShipAsync(CommandedShip, 2);
                 return string.Empty;
             }
             catch (Exception ex)
@@ -289,12 +269,11 @@ namespace AndromedaScaffold.WorkerRole
         /// returns the detailed description of the error.
         /// Don't forget to update the ship's status using the GetShipStatus() method after the transaction!
         /// </summary>
-        /// <returns></returns>
-        public static string AddCannon()
+        public static async Task<string> AddCannonAsync()
         {
             try
             {
-                client.AddCannon(CommandedShip);
+                await client.AddCannonAsync(CommandedShip);
                 return string.Empty;
             }
             catch (Exception ex)
@@ -312,12 +291,11 @@ namespace AndromedaScaffold.WorkerRole
         /// returns the detailed description of the error.
         /// Don't forget to update the ship's status using the GetShipStatus() method after the transaction!
         /// </summary>
-        /// <returns></returns>
-        public static string RemoveCannon()
+        public static async Task<string> RemoveCannonAsync()
         {
             try
             {
-                client.RemoveCannon(CommandedShip);
+                await client.RemoveCannonAsync(CommandedShip);
                 return string.Empty;
             }
             catch (Exception ex)
@@ -335,12 +313,11 @@ namespace AndromedaScaffold.WorkerRole
         /// returns the detailed description of the error.
         /// Don't forget to update the ship's status using the GetShipStatus() method after the transaction!
         /// </summary>
-        /// <returns></returns>
-        public static string AddShield()
+        public static async Task<string> AddShieldAsync()
         {
             try
             {
-                client.AddShield(CommandedShip);
+                await client.AddShieldAsync(CommandedShip);
                 return string.Empty;
             }
             catch (Exception ex)
@@ -358,12 +335,11 @@ namespace AndromedaScaffold.WorkerRole
         /// returns the detailed description of the error.
         /// Don't forget to update the ship's status using the GetShipStatus() method after the transaction!
         /// </summary>
-        /// <returns></returns>
-        public static string RemoveShield()
+        public static async Task<string> RemoveShieldAsync()
         {
             try
             {
-                client.RemoveShield(CommandedShip);
+                await client.RemoveShieldAsync(CommandedShip);
                 return string.Empty;
             }
             catch (Exception ex)
@@ -380,10 +356,9 @@ namespace AndromedaScaffold.WorkerRole
         /// A ship's transponder code is different from the GUIDs players are identified with, so a ship's
         /// transponder code cannot be used to impersonate a player.
         /// </remarks>
-        /// <returns></returns>
-        public static List<MerchantShip> GetRaidableShips()
+        public static Task<MerchantShip[]> GetRaidableShipsAsync()
         {
-            return client.GetRaidableShips(CommandedShip);
+            return client.GetRaidableShipsAsync(CommandedShip);
         }
 
         /// <summary>
@@ -396,13 +371,11 @@ namespace AndromedaScaffold.WorkerRole
         /// If your attack fails, then the target cannot shoot back (because his shields are overloaded and interfere
         /// with his targeting computer), so you get away unharmed, but you lost time while others were busy making profit!
         /// </summary>
-        /// <param name="target"></param>
-        /// <returns></returns>
-        public static string Raid(MerchantShip target)
+        public static async Task<string> RaidAsync(MerchantShip target)
         {
             try
             {
-                client.Raid(CommandedShip, target.TransponderCode);
+                await client.RaidAsync(CommandedShip, target.TransponderCode);
                 return string.Empty;
             }
             catch (Exception ex)
@@ -414,10 +387,9 @@ namespace AndromedaScaffold.WorkerRole
         /// <summary>
         /// Returns the identifiers of all the ships that you own.
         /// </summary>
-        /// <returns></returns>
-        public static List<Guid> GetOwnedShips()
+        public static Task<Guid[]> GetOwnedShipsAsync()
         {
-            return client.GetOwnedShips(new Guid(ConfigurationManager.AppSettings["PlayerGuid"]));
+            return client.GetOwnedShipsAsync(FunctionApp.Function.GetPlayerGuid());
         }
 
         /// <summary>
@@ -427,12 +399,11 @@ namespace AndromedaScaffold.WorkerRole
         /// is up from the parameter passed in to these methods.
         /// You can get a list of all your ships using the GetOwnedShips() method.
         /// </summary>
-        /// <returns></returns>
-        public static string BuyNewShip()
+        public static async Task<string> BuyNewShipAsync()
         {
             try
             {
-                client.BuyNewShip(new Guid(ConfigurationManager.AppSettings["PlayerGuid"]));
+                await client.BuyNewShipAsync(FunctionApp.Function.GetPlayerGuid());
                 return string.Empty;
             }
             catch (Exception ex)
