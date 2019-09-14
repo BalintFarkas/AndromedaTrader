@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/Andromeda.Master.cs"
+    Inherits="Andromeda.WebPages.Master" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Andromeda Trader</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <link rel="Stylesheet" href="/Style/Style.css" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeaderContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="sheet">
+        <div style="margin-bottom: 10px">
+            <div style="float: left">
+                <a href="/Default.aspx" id="header-title">Andromeda Trader</a>
+            </div>
+            <div style="float: right">
+                <asp:LoginView ID="LoginView1" runat="server">
+                    <AnonymousTemplate>
+                        <asp:LoginStatus ID="LoginStatus2" runat="server" />
+                        | <a href="AccountRegister.aspx">Register</a>
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome,
+                        <asp:LoginName ID="LoginName1" runat="server" />
+                        |
+                        <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div style="clear: both; height: 0">
+                &nbsp;</div>
+        </div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+        <div style="font-size: 80%; text-align: right; color: Gray; margin-top: 10px">
+            <!-- Please do not remove this notice. -->
+            Andromeda Trader - originally developed by <a href="http://www.matroit.com/kapcsolat"
+                target="_blank">Bálint Farkas, MatroIT Systems Kft,</a> 2012.
+        </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Andromeda" EntityNamespace="Andromeda.ServerEntities" ContextNamespace="Andromeda.Data" Class="AndromedaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="AndromedaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Stars" Member="Stars">
+    <Type Name="Star">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="X" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Y" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="Star_CommodityAtStar" Member="CommodityAtStars" ThisKey="Id" OtherKey="StarId" Type="CommodityAtStar" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Commodities" Member="Commodities">
+    <Type Name="Commodity">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Commodity_CommodityAtStar" Member="CommodityAtStars" ThisKey="Id" OtherKey="CommodityId" Type="CommodityAtStar" />
+      <Association Name="Commodity_CommodityInHold" Member="CommodityInHolds" ThisKey="Id" OtherKey="CommodityId" Type="CommodityInHold" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CommodityAtStars" Member="CommodityAtStars">
+    <Type Name="CommodityAtStar">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StarId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CommodityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BuyPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SellPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Stock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsSellable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ProductionRate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaxCapacity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Commodity_CommodityAtStar" Member="Commodity" ThisKey="CommodityId" OtherKey="Id" Type="Commodity" IsForeignKey="true" />
+      <Association Name="Star_CommodityAtStar" Member="Star" ThisKey="StarId" OtherKey="Id" Type="Star" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CommodityInHolds" Member="CommodityInHolds">
+    <Type Name="CommodityInHold">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SpaceshipId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CommodityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Count" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NetWorth" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Association Name="Commodity_CommodityInHold" Member="Commodity" ThisKey="CommodityId" OtherKey="Id" Type="Commodity" IsForeignKey="true" />
+      <Association Name="Spaceship_CommodityInHold" Member="Spaceship" ThisKey="SpaceshipId" OtherKey="Id" Type="Spaceship" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EventLogEntries" Member="EventLogEntries">
+    <Type Name="EventLogEntry">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Timestamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Player" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Guid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="EventType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Error" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Xml" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Players" Member="Players">
+    <Type Name="Player">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlayerName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PlayerMoney" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IsRunLocationEmulator" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RunLocationIp" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RunLocationTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FirstShipGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Player_Spaceship" Member="Spaceships" ThisKey="Id" OtherKey="PlayerId" Type="Spaceship" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Spaceships" Member="Spaceships">
+    <Type Name="Spaceship">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlayerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PlayerGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DriveCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SensorCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CurrentStarId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TargetStarId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LaunchDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModificationCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DebugTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ShipModel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CannonCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShieldCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastRaided" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TransponderCode" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="Spaceship_CommodityInHold" Member="CommodityInHolds" ThisKey="Id" OtherKey="SpaceshipId" Type="CommodityInHold" />
+      <Association Name="Player_Spaceship" Member="Player" ThisKey="PlayerId" OtherKey="Id" Type="Player" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AzureTouches" Member="AzureTouches">
+    <Type Name="AzureTouch">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LastTouchDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastTouchIp" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PlayerGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

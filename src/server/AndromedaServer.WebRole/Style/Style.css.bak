@@ -1,0 +1,43 @@
+﻿body
+{
+    font-family: "Segoe UI" , "Helvetica" ,Garuda,Arial,sans-serif;
+    font-size: 85%;
+}
+
+#sheet
+{
+    width: 950px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+}
+
+.andromeda-header-1
+{
+    background-color: #000000;
+    color: white;
+    padding: 3px;
+    margin-bottom: 10px;
+    font-size: 130%;
+}
+.andromeda-header-2
+{
+    background-color: #525252;
+    color: white;
+    padding: 3px;
+    margin-bottom: 10px;
+    font-size: 130%;
+}
+.note
+{
+    border: 1px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: #848404;
+    color: White;
+}
+.note.red
+{
+    background-color: #FB6F6F;
+}

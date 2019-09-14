@@ -1,0 +1,2 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Andromeda.WebServices.InformationService"
+    CodeBehind="~/WebServices/InformationService.svc.cs" Factory="WebHttpCors.CorsWebServiceHostFactory, WebHttpCors" %>

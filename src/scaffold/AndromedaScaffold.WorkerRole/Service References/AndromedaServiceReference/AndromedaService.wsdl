@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AndromedaService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://127.0.0.1:81/AndromedaService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://127.0.0.1:81/AndromedaService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://127.0.0.1:81/AndromedaService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Andromeda.ClientEntities" />
+      <xsd:import schemaLocation="http://127.0.0.1:81/AndromedaService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAndromedaService_GetSpaceshipStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpaceshipStatus" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_GetSpaceshipStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpaceshipStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_GetCurrentStar_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentStar" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_GetCurrentStar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentStarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_GetVisibleStars_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVisibleStars" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_GetVisibleStars_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVisibleStarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_GetRaidableShips_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRaidableShips" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_GetRaidableShips_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRaidableShipsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_GetOwnedShips_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOwnedShips" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_GetOwnedShips_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOwnedShipsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_RegisterRunLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterRunLocation" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_RegisterRunLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterRunLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_LaunchSpaceship_InputMessage">
+    <wsdl:part name="parameters" element="tns:LaunchSpaceship" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_LaunchSpaceship_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LaunchSpaceshipResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_Buy_InputMessage">
+    <wsdl:part name="parameters" element="tns:Buy" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_Buy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_BuyMaximum_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuyMaximum" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_BuyMaximum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuyMaximumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_Sell_InputMessage">
+    <wsdl:part name="parameters" element="tns:Sell" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_Sell_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SellResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_AddSensor_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSensor" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_AddSensor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSensorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_RemoveSensor_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSensor" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_RemoveSensor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveSensorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_AddDrive_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDrive" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_AddDrive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDriveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_RemoveDrive_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveDrive" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_RemoveDrive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveDriveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_UpgradeShip_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpgradeShip" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_UpgradeShip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpgradeShipResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_AddCannon_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCannon" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_AddCannon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCannonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_RemoveCannon_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCannon" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_RemoveCannon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCannonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_AddShield_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddShield" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_AddShield_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddShieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_RemoveShield_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveShield" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_RemoveShield_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveShieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_Raid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Raid" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_Raid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RaidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_BuyNewShip_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuyNewShip" />
+  </wsdl:message>
+  <wsdl:message name="IAndromedaService_BuyNewShip_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuyNewShipResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAndromedaService">
+    <wsdl:operation name="GetSpaceshipStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/GetSpaceshipStatus" message="tns:IAndromedaService_GetSpaceshipStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/GetSpaceshipStatusResponse" message="tns:IAndromedaService_GetSpaceshipStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentStar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/GetCurrentStar" message="tns:IAndromedaService_GetCurrentStar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/GetCurrentStarResponse" message="tns:IAndromedaService_GetCurrentStar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVisibleStars">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/GetVisibleStars" message="tns:IAndromedaService_GetVisibleStars_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/GetVisibleStarsResponse" message="tns:IAndromedaService_GetVisibleStars_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRaidableShips">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/GetRaidableShips" message="tns:IAndromedaService_GetRaidableShips_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/GetRaidableShipsResponse" message="tns:IAndromedaService_GetRaidableShips_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOwnedShips">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/GetOwnedShips" message="tns:IAndromedaService_GetOwnedShips_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/GetOwnedShipsResponse" message="tns:IAndromedaService_GetOwnedShips_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterRunLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/RegisterRunLocation" message="tns:IAndromedaService_RegisterRunLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/RegisterRunLocationResponse" message="tns:IAndromedaService_RegisterRunLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LaunchSpaceship">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/LaunchSpaceship" message="tns:IAndromedaService_LaunchSpaceship_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/LaunchSpaceshipResponse" message="tns:IAndromedaService_LaunchSpaceship_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Buy">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/Buy" message="tns:IAndromedaService_Buy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/BuyResponse" message="tns:IAndromedaService_Buy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuyMaximum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/BuyMaximum" message="tns:IAndromedaService_BuyMaximum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/BuyMaximumResponse" message="tns:IAndromedaService_BuyMaximum_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Sell">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/Sell" message="tns:IAndromedaService_Sell_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/SellResponse" message="tns:IAndromedaService_Sell_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSensor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/AddSensor" message="tns:IAndromedaService_AddSensor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/AddSensorResponse" message="tns:IAndromedaService_AddSensor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSensor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/RemoveSensor" message="tns:IAndromedaService_RemoveSensor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/RemoveSensorResponse" message="tns:IAndromedaService_RemoveSensor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDrive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/AddDrive" message="tns:IAndromedaService_AddDrive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/AddDriveResponse" message="tns:IAndromedaService_AddDrive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveDrive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/RemoveDrive" message="tns:IAndromedaService_RemoveDrive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/RemoveDriveResponse" message="tns:IAndromedaService_RemoveDrive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeShip">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/UpgradeShip" message="tns:IAndromedaService_UpgradeShip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/UpgradeShipResponse" message="tns:IAndromedaService_UpgradeShip_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCannon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/AddCannon" message="tns:IAndromedaService_AddCannon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/AddCannonResponse" message="tns:IAndromedaService_AddCannon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCannon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/RemoveCannon" message="tns:IAndromedaService_RemoveCannon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/RemoveCannonResponse" message="tns:IAndromedaService_RemoveCannon_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddShield">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/AddShield" message="tns:IAndromedaService_AddShield_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/AddShieldResponse" message="tns:IAndromedaService_AddShield_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveShield">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/RemoveShield" message="tns:IAndromedaService_RemoveShield_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/RemoveShieldResponse" message="tns:IAndromedaService_RemoveShield_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Raid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/Raid" message="tns:IAndromedaService_Raid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/RaidResponse" message="tns:IAndromedaService_Raid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuyNewShip">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAndromedaService/BuyNewShip" message="tns:IAndromedaService_BuyNewShip_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAndromedaService/BuyNewShipResponse" message="tns:IAndromedaService_BuyNewShip_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAndromedaService" type="tns:IAndromedaService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSpaceshipStatus">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/GetSpaceshipStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentStar">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/GetCurrentStar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVisibleStars">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/GetVisibleStars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRaidableShips">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/GetRaidableShips" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOwnedShips">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/GetOwnedShips" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterRunLocation">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/RegisterRunLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LaunchSpaceship">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/LaunchSpaceship" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Buy">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/Buy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuyMaximum">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/BuyMaximum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sell">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/Sell" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSensor">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/AddSensor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSensor">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/RemoveSensor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDrive">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/AddDrive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveDrive">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/RemoveDrive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeShip">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/UpgradeShip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCannon">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/AddCannon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCannon">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/RemoveCannon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddShield">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/AddShield" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveShield">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/RemoveShield" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Raid">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/Raid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuyNewShip">
+      <soap:operation soapAction="http://tempuri.org/IAndromedaService/BuyNewShip" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AndromedaService">
+    <wsdl:port name="BasicHttpBinding_IAndromedaService" binding="tns:BasicHttpBinding_IAndromedaService">
+      <soap:address location="http://127.0.0.1:81/AndromedaService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,57 @@
+﻿body
+{
+    font-family: "Segoe UI" , "Helvetica" ,Garuda,Arial,sans-serif;
+    font-size: 85%;
+}
+
+h1
+{
+    background-color: #000000;
+    color: white;
+    display: block;
+    font-size: 130%;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+    padding: 3px 3px 3px 7px;
+}
+
+h2
+{
+    background-color: #525252;
+    color: white;
+    display: block;
+    font-size: 130%;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+    padding: 3px 3px 3px 7px;
+}
+
+#header-title
+{
+    color: Black;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#sheet
+{
+    width: 950px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+}
+
+.note
+{
+    border: 1px solid black;
+    padding: 15px;
+    margin: 10px;
+    background-color: #FCFC98;
+}
+
+.note.red
+{
+    background-color: #FB6F6F;
+}

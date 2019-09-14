@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ddf7b8d4-d386-4a96-afde-2e80ed585ccc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:81/AndromedaService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AndromedaService.xsd" MetadataType="Schema" ID="ec6615ba-4ac8-4f0a-917b-e1a827d204d0" SourceId="1" SourceUrl="http://127.0.0.1:81/AndromedaService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AndromedaService3.xsd" MetadataType="Schema" ID="df19eaa6-a6fc-4024-8590-887bf135f1f7" SourceId="1" SourceUrl="http://127.0.0.1:81/AndromedaService.svc?xsd=xsd3" />
+    <MetadataFile FileName="AndromedaService.wsdl" MetadataType="Wsdl" ID="4adeb5dd-147f-47b3-97fe-63c3a8422b3b" SourceId="1" SourceUrl="http://127.0.0.1:81/AndromedaService.svc?wsdl" />
+    <MetadataFile FileName="AndromedaService.disco" MetadataType="Disco" ID="a155cfe2-836e-4d18-b526-f39e4eb42d5c" SourceId="1" SourceUrl="http://127.0.0.1:81/AndromedaService.svc?disco" />
+    <MetadataFile FileName="AndromedaService1.xsd" MetadataType="Schema" ID="389097cf-d2b4-4a4a-b668-9a0a4f45c292" SourceId="1" SourceUrl="http://127.0.0.1:81/AndromedaService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AndromedaService2.xsd" MetadataType="Schema" ID="b6794bcf-98d2-4654-847a-fe38c10d192e" SourceId="1" SourceUrl="http://127.0.0.1:81/AndromedaService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ComponentName_Cannon" xml:space="preserve">
+    <value>cannon</value>
+  </data>
+  <data name="ComponentName_Drive" xml:space="preserve">
+    <value>drive</value>
+  </data>
+  <data name="ComponentName_Sensor" xml:space="preserve">
+    <value>sensor</value>
+  </data>
+  <data name="ComponentName_Shield" xml:space="preserve">
+    <value>shield</value>
+  </data>
+  <data name="ComponentName_Unknown" xml:space="preserve">
+    <value>unknown component</value>
+  </data>
+  <data name="Error_AlreadyInTargetSystem" xml:space="preserve">
+    <value>The ship is already in the targeted star system!</value>
+  </data>
+  <data name="Error_CannotAttackYourself" xml:space="preserve">
+    <value>You cannot attack yourself!</value>
+  </data>
+  <data name="Error_CannotLaunchTwice" xml:space="preserve">
+    <value>The ship is already in space - it cannot be launched again!</value>
+  </data>
+  <data name="Error_ComponentNotPresent" xml:space="preserve">
+    <value>You don't have any of this component on your ship!</value>
+  </data>
+  <data name="Error_InvalidPlayerId" xml:space="preserve">
+    <value>Invalid player identifier! Please don't forget to register yourself on the Andromeda homepage and to enter your identifier in the app.config file!</value>
+  </data>
+  <data name="Error_InvalidShipModel" xml:space="preserve">
+    <value>Invalid ship model!</value>
+  </data>
+  <data name="Error_InvalidTransponderCode" xml:space="preserve">
+    <value>There is no ship with this transponder code!</value>
+  </data>
+  <data name="Error_ModificationLimitReached" xml:space="preserve">
+    <value>You reached the modification limit - move to another star system to add or remove further components!</value>
+  </data>
+  <data name="Error_NoNegativeQuantity" xml:space="preserve">
+    <value>You cannot trade a negative quantity!</value>
+  </data>
+  <data name="Error_NotBoughtHere" xml:space="preserve">
+    <value>This star system are not interested in this commodity!</value>
+  </data>
+  <data name="Error_NotEnoughCargoSpace" xml:space="preserve">
+    <value>There is not enough cargo space in your ship for this order!</value>
+  </data>
+  <data name="Error_NotEnoughForSale" xml:space="preserve">
+    <value>The quantity available of this commodity in this star system is less than the amount you tried to purchase!</value>
+  </data>
+  <data name="Error_NotEnoughInHold" xml:space="preserve">
+    <value>The quantity stored of this commodity in your cargo hold is less than the amount you tried to sell!</value>
+  </data>
+  <data name="Error_NotEnoughMoneyForShipModel" xml:space="preserve">
+    <value>You need {0} credits to purchase this ship model!</value>
+  </data>
+  <data name="Error_NotEnoughMoneyForShipPurchase" xml:space="preserve">
+    <value>You need {0} credits to purchase another ship!</value>
+  </data>
+  <data name="Error_NotEnoughMoneyForTrade" xml:space="preserve">
+    <value>You don't have enough money to perform this purchase!</value>
+  </data>
+  <data name="Error_NotEnoughSpaceForComponent" xml:space="preserve">
+    <value>You don't have enough free cargo hold space for this component!</value>
+  </data>
+  <data name="Error_NotInHold" xml:space="preserve">
+    <value>You don't this commodity in your cargo hold!</value>
+  </data>
+  <data name="Error_NotTradedHere" xml:space="preserve">
+    <value>This star system does not trade this commodity!</value>
+  </data>
+  <data name="Error_ShipCreatedRecently" xml:space="preserve">
+    <value>This ship was created recently, wait a little!</value>
+  </data>
+  <data name="Error_ShipIsInSpace" xml:space="preserve">
+    <value>The ship is currently in space - this operation cannot be performed!</value>
+  </data>
+  <data name="Error_ShipLimitReached" xml:space="preserve">
+    <value>You have already reached the maximum number of ships!</value>
+  </data>
+  <data name="Error_ShipModelAlreadyBetter" xml:space="preserve">
+    <value>You already have a ship model that is equal to or better than the one you tried to purchase!</value>
+  </data>
+  <data name="Error_ShipOutOfRange" xml:space="preserve">
+    <value>The target is out of range!</value>
+  </data>
+  <data name="Error_ShipRaidedRecently" xml:space="preserve">
+    <value>This ship was raided recently, wait a little!</value>
+  </data>
+  <data name="Error_StarIsTooFar" xml:space="preserve">
+    <value>The target star is too far from the ship!</value>
+  </data>
+  <data name="FleetInfo_CargoHeader" xml:space="preserve">
+    <value>You have the following cargo in your hold:&lt;br /&gt;{0}</value>
+  </data>
+  <data name="FleetInfo_CargoItem" xml:space="preserve">
+    <value>{0}, {1} units&lt;br /&gt;</value>
+    <comment>{5}, {150} units&lt;br /&gt;</comment>
+  </data>
+  <data name="FleetInfo_Hardware" xml:space="preserve">
+    <value>The ship's free cargo capacity is {0} units (out of the maximum {1} units), its maximum speed is {2} light years/minute and its sensor range is {3} light years.&lt;br /&gt;Besides its built-in systems it has {4} extra drives, {5} extra sensors, {6} cannons and {7} shields installed.</value>
+  </data>
+  <data name="FleetInfo_NoCargo" xml:space="preserve">
+    <value>The ship has no cargo.</value>
+  </data>
+  <data name="FleetInfo_ShipEnRoute" xml:space="preserve">
+    <value>Your ship is currently in flight.&lt;br /&gt;Origin: &lt;b&gt;{0}&lt;/b&gt;&lt;br /&gt;Destination: &lt;b&gt;{1}&lt;/b&gt;&lt;br /&gt;The distance between the two stars is {2} light years. The ship is {3} light years from its destination.</value>
+  </data>
+  <data name="FleetInfo_ShipInPort" xml:space="preserve">
+    <value>Your ship is currently in the main spaceport of the &lt;b&gt;{0}&lt;/b&gt; star system.</value>
+  </data>
+  <data name="FleetInfo_ShipN" xml:space="preserve">
+    <value>&lt;hr /&gt;Ship {0}&lt;br /&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="FleetInfo_ShipsAndCredits" xml:space="preserve">
+    <value>You have &lt;b&gt;{0}&lt;/b&gt; credits and {1} ships.</value>
+  </data>
+  <data name="FleetInfo_SpaceOccupiedByComponents" xml:space="preserve">
+    <value>&lt;br /&gt;The extra drives, sensors, cannons and shields occupy {0} units of space in your cargo hold.</value>
+  </data>
+  <data name="LeaderboardItem" xml:space="preserve">
+    <value>{0}. {1}: {2} credits&lt;br /&gt;</value>
+    <comment>{4.} {Player}: {2 400 000} credits&lt;br /&gt;</comment>
+  </data>
+  <data name="Log_Launch" xml:space="preserve">
+    <value>{0} launched from {1} to {2}.</value>
+    <comment>{Player} launched from {Star System 1} to {Star System 2}.</comment>
+  </data>
+  <data name="Log_PirateRaid_Failed" xml:space="preserve">
+    <value>{0} attacked {1}, but couldn't penetrate the target's shields and was forced to retreat!</value>
+    <comment>{Pirate Player} attacked {Victim Player}, but couldn't penetrate the target's shields and was forced to retreat!</comment>
+  </data>
+  <data name="Log_PirateRaid_Successful" xml:space="preserve">
+    <value>{0} attacked {1} and robbed him of {2} units of cargo!</value>
+    <comment>{Pirate Player} attacked {Victim Player} and robbed him of {2} units of cargo!</comment>
+  </data>
+  <data name="Log_ShipModification" xml:space="preserve">
+    <value>A {0} was {1} {2} {3}'s ship. There are now {4} installed.</value>
+    <comment>A {component} was {added} {to} {Player}'s ship. There are now {6} installed.</comment>
+  </data>
+  <data name="Log_ShipModification_Added" xml:space="preserve">
+    <value>added</value>
+  </data>
+  <data name="Log_ShipModification_FromShip" xml:space="preserve">
+    <value>from</value>
+  </data>
+  <data name="Log_ShipModification_Removed" xml:space="preserve">
+    <value>removed</value>
+  </data>
+  <data name="Log_ShipModification_ToShip" xml:space="preserve">
+    <value>to</value>
+  </data>
+  <data name="Log_ShipPurchase" xml:space="preserve">
+    <value>{0} purchased a new spaceship - the fleet now includes {1} ships!</value>
+    <comment>{Player} purchased a new spaceship - the fleet now includes {4} ships!</comment>
+  </data>
+  <data name="Log_ShipUpgrade" xml:space="preserve">
+    <value>{0}'s ship was upgraded to the {1} model (cargo space: {2} units)!</value>
+    <comment>{Player}'s ship was upgraded to the {Aquila} model (cargo space: {300} units)!</comment>
+  </data>
+  <data name="Log_Trade_Failed" xml:space="preserve">
+    <value>{0} tried to {1} zero units of {2}.</value>
+    <comment>{Player} tried to {sell} zero units of {commodity}.</comment>
+  </data>
+  <data name="Log_Trade_Failed_Buy" xml:space="preserve">
+    <value>buy</value>
+  </data>
+  <data name="Log_Trade_Failed_Sell" xml:space="preserve">
+    <value>sell</value>
+  </data>
+  <data name="Log_Trade_Successful" xml:space="preserve">
+    <value>{0} {1} {2} units of {3} in {4}, for {5} credits apiece. {0} now has {6} credits.</value>
+    <comment>{Player} {bought} {120} units of {commodity} in {Star System}, for {5600} credits apiece. {Player} now has {3 400 000} credits.</comment>
+  </data>
+  <data name="Log_Trade_Successful_Bought" xml:space="preserve">
+    <value>bought</value>
+  </data>
+  <data name="Log_Trade_Successful_Sold" xml:space="preserve">
+    <value>sold</value>
+  </data>
+  <data name="Log_Unknown" xml:space="preserve">
+    <value>Something happened!</value>
+  </data>
+  <data name="Map_HoverMouse" xml:space="preserve">
+    <value>Hover the mouse over something!</value>
+  </data>
+  <data name="Map_Spaceship" xml:space="preserve">
+    <value>Spaceship: </value>
+  </data>
+</root>

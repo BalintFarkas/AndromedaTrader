@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AndromedaScaffold.Cloud", "AndromedaScaffold.Cloud\AndromedaScaffold.Cloud.ccproj", "{492B24F8-DBA1-4C72-8BD9-C820FF07FF05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndromedaScaffold.WorkerRole", "AndromedaScaffold.WorkerRole\AndromedaScaffold.WorkerRole.csproj", "{3A6699F9-4CA4-4374-808C-F50DCF92999A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{492B24F8-DBA1-4C72-8BD9-C820FF07FF05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{492B24F8-DBA1-4C72-8BD9-C820FF07FF05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{492B24F8-DBA1-4C72-8BD9-C820FF07FF05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{492B24F8-DBA1-4C72-8BD9-C820FF07FF05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A6699F9-4CA4-4374-808C-F50DCF92999A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A6699F9-4CA4-4374-808C-F50DCF92999A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A6699F9-4CA4-4374-808C-F50DCF92999A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A6699F9-4CA4-4374-808C-F50DCF92999A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

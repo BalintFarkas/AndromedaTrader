@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 12.125" name="AndromedaDataContext">
+  <DataContextMoniker Name="/AndromedaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="cc48688b-184e-42c6-a341-4cb3a653429b" absoluteBounds="3.5, 10.125, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/AndromedaDataContext/Star" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c51d86f-cbd2-4c3b-9d7c-c92b07e26c1f" absoluteBounds="3.5150000005960464, 10.58500000089407, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2a21a97e-512a-41da-8b19-924d2aedbf8e" absoluteBounds="3.5, 7.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/AndromedaDataContext/Commodity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9bf7cc5a-332a-44c6-b83c-11f8acdb825d" absoluteBounds="3.5150000005960464, 7.96000000089407, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="550be46d-2a76-4e88-bd92-a842273bf38a" absoluteBounds="6.25, 6.75, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/AndromedaDataContext/CommodityAtStar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="258b561e-5dfa-4d83-be7f-3119c3d039ad" absoluteBounds="6.2650000005960464, 7.21000000089407, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="06ce2e8f-b7a4-4374-b3c5-9f176d23af7f" absoluteBounds="6.25, 2.125, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/AndromedaDataContext/CommodityInHold" />
+      <nestedChildShapes>
+        <elementListCompartment Id="982f85a8-c3d7-473c-8c51-64838b037942" absoluteBounds="6.2650000005960464, 2.5850000008940697, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e3a00f7e-10a6-4340-9438-70c5b3d4b79c" absoluteBounds="8.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/AndromedaDataContext/EventLogEntry" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a9203d99-2d9b-4952-8a8f-33630176ea27" absoluteBounds="8.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b041ce3c-7249-471b-87f3-d4d4906fa1ba" absoluteBounds="0.75, 2, 2, 2.155499674479167">
+      <DataClassMoniker Name="/AndromedaDataContext/Player" />
+      <nestedChildShapes>
+        <elementListCompartment Id="21458380-b7e8-4b58-bfab-ca85b350309c" absoluteBounds="0.76500000059604645, 2.4600000008940697, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="24f92a48-7c56-476c-8de3-3dc1c9763683" absoluteBounds="3.5, 1, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/AndromedaDataContext/Spaceship" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c755e954-2f0b-4da3-ade3-edc4d051bf51" absoluteBounds="3.5150000005960464, 1.4600000008940697, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 8.09699625651042); (6.25 : 8.09699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AndromedaDataContext/Commodity/Commodity_CommodityAtStar" />
+      <nodes>
+        <classShapeMoniker Id="2a21a97e-512a-41da-8b19-924d2aedbf8e" />
+        <classShapeMoniker Id="550be46d-2a76-4e88-bd92-a842273bf38a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 11.0104484049479); (7.25 : 11.0104484049479); (7.25 : 9.2901025390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AndromedaDataContext/Star/Star_CommodityAtStar" />
+      <nodes>
+        <classShapeMoniker Id="cc48688b-184e-42c6-a341-4cb3a653429b" />
+        <classShapeMoniker Id="550be46d-2a76-4e88-bd92-a842273bf38a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.50000000036011 : 7.5); (5.875 : 7.12500000036011); (5.875 : 3.01044840494792); (6.25 : 3.01044840494792)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AndromedaDataContext/Commodity/Commodity_CommodityInHold" />
+      <nodes>
+        <classShapeMoniker Id="2a21a97e-512a-41da-8b19-924d2aedbf8e" />
+        <classShapeMoniker Id="06ce2e8f-b7a4-4374-b3c5-9f176d23af7f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.50522420265401); (6.25 : 2.50522420265401)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AndromedaDataContext/Spaceship/Spaceship_CommodityInHold" />
+      <nodes>
+        <classShapeMoniker Id="24f92a48-7c56-476c-8de3-3dc1c9763683" />
+        <classShapeMoniker Id="06ce2e8f-b7a4-4374-b3c5-9f176d23af7f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.07774983723958); (3.5 : 3.07774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/AndromedaDataContext/Player/Player_Spaceship" />
+      <nodes>
+        <classShapeMoniker Id="b041ce3c-7249-471b-87f3-d4d4906fa1ba" />
+        <classShapeMoniker Id="24f92a48-7c56-476c-8de3-3dc1c9763683" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8ae6e272-9109-45ce-87b3-cd1259179b65" absoluteBounds="8.75, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/AndromedaDataContext/AzureTouch" />
+      <nestedChildShapes>
+        <elementListCompartment Id="efa239c9-39d1-4513-8776-8f7d286f33e9" absoluteBounds="8.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
