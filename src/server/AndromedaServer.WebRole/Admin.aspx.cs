@@ -20,7 +20,7 @@ namespace Andromeda.WebPages
         protected void Page_Load(object sender, EventArgs e)
         {
             // Temporary workaround to fix: https://github.com/BalintFarkas/AndromedaTrader/issues/1
-            if ((User.Identity.Name?.Contains("admin") ?? false))
+            if ((User.Identity.Name?.Equals("admin") ?? false))
             {
                 return;
             }
