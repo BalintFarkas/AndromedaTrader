@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Andromeda;
-using System.IO;
-using Troschuetz.Random;
+﻿using Andromeda.Common;
 using Andromeda.Data;
 using Andromeda.ServerEntities;
-using Andromeda.Common;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Web.UI.WebControls;
+using Troschuetz.Random;
 
 namespace Andromeda.WebPages
 {
@@ -19,12 +16,6 @@ namespace Andromeda.WebPages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Temporary workaround to fix: https://github.com/BalintFarkas/AndromedaTrader/issues/1
-            if ((User.Identity.Name?.Equals("admin") ?? false))
-            {
-                return;
-            }
-
             try
             {
                 if (!User.IsInRole("Administrator"))
