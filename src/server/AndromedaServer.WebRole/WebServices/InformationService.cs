@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.ServiceModel;
-using System.ServiceModel.Activation;
-using Andromeda.Common;
-using Andromeda.Data;
+﻿using Andromeda.Common;
 using Andromeda.EventLog;
 using Andromeda.EventLogEntries;
 using Andromeda.ServerEntities;
-using System.Globalization;
-using System.ServiceModel.Web;
-using System.Web.Script.Serialization;
-using System.Data.Linq;
 using AndromedaServer.WebRole;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.ServiceModel;
+using System.ServiceModel.Activation;
 
 namespace Andromeda.WebServices
 {
@@ -142,7 +138,7 @@ namespace Andromeda.WebServices
         /// <returns></returns>
         private string GetTicker()
         {
-            return GetTicker(Guid.Empty, 10);
+            return GetTicker(Guid.Empty, 100);
         }
 
         /// <summary>
@@ -350,8 +346,8 @@ namespace Andromeda.WebServices
             var player = db.Players.Single(i => i.FirstShipGuid == guid);
 
             NumberFormatInfo nfi = new NumberFormatInfo() { NumberDecimalDigits = 0, NumberGroupSeparator = "." };
-            result += string.Format(Localization.FleetInfo_ShipsAndCredits, 
-                player.PlayerMoney.Value.ToString("N", nfi), 
+            result += string.Format(Localization.FleetInfo_ShipsAndCredits,
+                player.PlayerMoney.Value.ToString("N", nfi),
                 player.Spaceships.Count);
             result += "<br />";
 
@@ -396,8 +392,8 @@ namespace Andromeda.WebServices
                     string cargoInHold = "";
                     foreach (var cargo in spaceship.CommodityInHolds)
                     {
-                        cargoInHold += string.Format(Localization.FleetInfo_CargoItem, 
-                            cargo.Commodity.Name, 
+                        cargoInHold += string.Format(Localization.FleetInfo_CargoItem,
+                            cargo.Commodity.Name,
                             cargo.Count);
                     }
 
