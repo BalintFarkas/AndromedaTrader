@@ -1,9 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AndromedaScaffold.Cloud", "AndromedaScaffold.Cloud\AndromedaScaffold.Cloud.ccproj", "{492B24F8-DBA1-4C72-8BD9-C820FF07FF05}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndromedaScaffold.WorkerRole", "AndromedaScaffold.WorkerRole\AndromedaScaffold.WorkerRole.csproj", "{3A6699F9-4CA4-4374-808C-F50DCF92999A}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.89
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndromedaScaffold.FunctionApp", "AndromedaScaffold.FunctionApp\AndromedaScaffold.FunctionApp.csproj", "{3E1D268B-E5BC-47E9-B978-18182A214B3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,16 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{492B24F8-DBA1-4C72-8BD9-C820FF07FF05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{492B24F8-DBA1-4C72-8BD9-C820FF07FF05}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{492B24F8-DBA1-4C72-8BD9-C820FF07FF05}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{492B24F8-DBA1-4C72-8BD9-C820FF07FF05}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A6699F9-4CA4-4374-808C-F50DCF92999A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A6699F9-4CA4-4374-808C-F50DCF92999A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A6699F9-4CA4-4374-808C-F50DCF92999A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A6699F9-4CA4-4374-808C-F50DCF92999A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E1D268B-E5BC-47E9-B978-18182A214B3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E1D268B-E5BC-47E9-B978-18182A214B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E1D268B-E5BC-47E9-B978-18182A214B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E1D268B-E5BC-47E9-B978-18182A214B3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20D2706F-A6F0-4C37-8D6E-553BDB8AC4A7}
 	EndGlobalSection
 EndGlobal

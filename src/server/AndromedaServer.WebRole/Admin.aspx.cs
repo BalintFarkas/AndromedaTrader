@@ -19,12 +19,27 @@ namespace Andromeda.WebPages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!User.IsInRole("Administrator"))
+            // Temporary workaround to fix: https://github.com/BalintFarkas/AndromedaTrader/issues/1
+            if ((User.Identity.Name?.Equals("admin") ?? false))
             {
-                Response.Write("Access denied.");
-                Response.End();
                 return;
             }
+
+            try
+            {
+                if (!User.IsInRole("Administrator"))
+                {
+                    Response.Write("Access denied.");
+                    Response.End();
+                    return;
+                }
+            }
+            catch (Exception exception)
+            {
+                Response.Write($"Server error: {exception}");
+                Response.End();
+            }
+
         }
 
         #region Starfield Generation

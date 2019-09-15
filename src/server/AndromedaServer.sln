@@ -1,11 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.89
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AndromedaServer.Cloud", "AndromedaServer.Cloud\AndromedaServer.Cloud.ccproj", "{018ADF33-2155-43A7-B7BB-0C785852985D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndromedaServer.WebRole", "AndromedaServer.WebRole\AndromedaServer.WebRole.csproj", "{35553C44-C759-400E-8285-4AB5AE7C4A8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndromedaServer.WorkerRole", "AndromedaServer.WorkerRole\AndromedaServer.WorkerRole.csproj", "{3DE6DA73-25D5-4360-B3A3-1095537FF118}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndromedaServer.WebJob", "AndromedaServer.WebJob\AndromedaServer.WebJob.csproj", "{A811AFAD-BAF4-4381-B72A-67EEB550085B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,12 +23,15 @@ Global
 		{35553C44-C759-400E-8285-4AB5AE7C4A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35553C44-C759-400E-8285-4AB5AE7C4A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35553C44-C759-400E-8285-4AB5AE7C4A8B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3DE6DA73-25D5-4360-B3A3-1095537FF118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3DE6DA73-25D5-4360-B3A3-1095537FF118}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3DE6DA73-25D5-4360-B3A3-1095537FF118}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3DE6DA73-25D5-4360-B3A3-1095537FF118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A811AFAD-BAF4-4381-B72A-67EEB550085B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A811AFAD-BAF4-4381-B72A-67EEB550085B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A811AFAD-BAF4-4381-B72A-67EEB550085B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A811AFAD-BAF4-4381-B72A-67EEB550085B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A31AFC0-85F1-4649-863F-404B16D0E134}
 	EndGlobalSection
 EndGlobal
