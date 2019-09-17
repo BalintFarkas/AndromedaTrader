@@ -1,3 +1,6 @@
+/* The game was developed by: Bálint Farkas (balint.farkas@windowslive.com), MatroIT Systems Kft.
+ * Commissioned by Microsoft Hungary. */
+ 
 using AndromedaScaffold.WorkerRole.AndromedaServiceReference;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Configuration;
