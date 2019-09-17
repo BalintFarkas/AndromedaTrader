@@ -56,6 +56,8 @@
 
         //Interface objects
         var stage;
+        var backgroundLayer;
+        var sensorLayer;
         var starsLayer;
         var shipsLayer;
 
@@ -81,7 +83,9 @@
 
         function initializeMap() {
             stage = new Kinetic.Stage({ container: "mapViewport", width: 500, height: 500 });
+            backgroundLayer = new Kinetic.Layer();
             starsLayer = new Kinetic.Layer();
+            sensorLayer = new Kinetic.Layer();
             shipsLayer = new Kinetic.Layer();
 
             var backgroundImage = new Kinetic.Rect({
@@ -92,7 +96,7 @@
                 fill: "#000000"
             });
 
-            starsLayer.add(backgroundImage);
+            backgroundLayer.add(backgroundImage);
 
             for (var pubI = 0; pubI < stars.GetStarsResult.length; pubI++) {
                 (function () { //Function call to create a new variable scope
@@ -112,9 +116,11 @@
                     });
 
                     starsLayer.add(starImage);
-                } ());
+                }());
             };
 
+            stage.add(backgroundLayer);
+            stage.add(sensorLayer);
             stage.add(starsLayer);
             stage.add(shipsLayer);
 
@@ -131,9 +137,39 @@
                 data: '{"playerGuid": "' + playerGuid + '"}',
                 success: function (msg) {
                     ships = msg;
+                    renderSensorDistanceOfUsersShips();
                     renderShips();
                 }
             });
+        }
+
+        function renderSensorDistanceOfUsersShips() {
+            //Clear stale data from sensor layer
+            //The clear() method clears only the drawn area but doesn't actually delete children objects - do this manually
+            var count = sensorLayer.children.length;
+            for (var i = 0; i < count; i++) sensorLayer.remove(sensorLayer.children[0]);
+
+            //Load fresh data
+            for (var pubI = 0; pubI < ships.GetShipsResult.length; pubI++) {
+                (function () { //Function call to create a new variable scope
+                    var i = pubI; //Local copy of the iterator in this scope
+
+                    var sensorRange = ships.GetShipsResult[i].SensorRange;
+                    if (sensorRange > 0) {// only the users ships' sensor will be visible on map
+                        var sensorImage = new Kinetic.Circle({
+                            x: ships.GetShipsResult[i].X,
+                            y: ships.GetShipsResult[i].Y,
+                            radius: sensorRange / 2,
+                            fill: "#FEF9E7",
+                            alpha: 0.2,
+                        });
+                        sensorLayer.add(sensorImage);
+                    }
+                }());
+            }
+
+            //Perform render
+            sensorLayer.draw();
         }
 
         function renderShips() {
