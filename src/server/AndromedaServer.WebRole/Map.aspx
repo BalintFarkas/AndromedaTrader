@@ -164,6 +164,16 @@
                             alpha: 0.2,
                         });
                         sensorLayer.add(sensorImage);
+
+                        // TODO: has cannon
+                        var piracyImage = new Kinetic.Circle({
+                            x: ships.GetShipsResult[i].X,
+                            y: ships.GetShipsResult[i].Y,
+                            radius: 20, // if the target is farther than 40 light years, then even though you have him on your sensors, you cannot effectively attack him.
+                            fill: "#FF0000",
+                            alpha: 0.25,
+                        });
+                        sensorLayer.add(piracyImage);
                     }
                 }());
             }
@@ -197,7 +207,7 @@
                     });
 
                     shipsLayer.add(shipImage);
-                } ());
+                }());
             };
 
             //Perform render
@@ -207,8 +217,7 @@
             setTimeout(downloadShips, 5000);
         }
     </script>
-    <h1>
-        Andromeda Trader</h1>
+    <h1>Andromeda Trader</h1>
     <asp:Panel runat="server" ID="NoPilotPanel">
         <div class="note">
             Andromeda Trader is set in a simulated galaxy, where the spaceships of our players
@@ -234,48 +243,42 @@
         </div>
     </asp:Panel>
     <div style="float: left; width: 500px;">
-        <h2>
-            Starmap</h2>
-        Selected item: <span id="planetNameSpan" style="font-weight: bold; margin-bottom: 5px;
-            display: inline-block">Hover the mouse over something!</span>
+        <h2>Starmap</h2>
+        Selected item: <span id="planetNameSpan" style="font-weight: bold; margin-bottom: 5px; display: inline-block">Hover the mouse over something!</span>
         <br />
         <div id="mapViewport" style="width: 500px; height: 500px">
         </div>
         <i>You need a HTML5-capable browser to display the map.</i>
     </div>
     <div style="float: left; margin-left: 15px; width: 435px">
-        <h2>
-            Happening Now</h2>
+        <h2>Happening Now</h2>
         <div style="height: 350px; overflow: scroll">
             <span id="tickerSpan"></span>
         </div>
         <br />
-        <h2>
-            Results</h2>
+        <h2>Results</h2>
         <span id="leaderboardSpan"></span><span id="leaderboardWarningSpan" runat="server"
             style="font-weight: bold">Only ships <a href="/andromeda-upload">running from Azure</a>
             get on the leaderboard.<br />
         </span><a href="FullLeaderboard.aspx">Click here</a> to view the full leaderboard.<br />
     </div>
     <div style="clear: both; height: 0">
-        &nbsp;</div>
+        &nbsp;
+    </div>
     <asp:Panel runat="server" ID="PilotPanel">
         <div style="padding: 10px 0 20px 0">
-            <h2>
-                Fleet Status</h2>
+            <h2>Fleet Status</h2>
             <span id="pilotStatusSpan"></span>
             <br />
             <br />
-            <h2>
-                Developer Tools</h2>
+            <h2>Developer Tools</h2>
             If you'd like to re-read the rules, <a href="Register.aspx">click here.</a><br />
             <br />
             Your Unique ID: <b>
                 <asp:Literal runat="server" ID="PilotGuidLiteral"></asp:Literal></b><br />
             <br />
             <a href="AndromedaScaffold.zip">Click here to download the Visual Studio template.</a>
-            You'll need the <a href="http://go.microsoft.com/fwlink/?LinkID=234939&clcid=0x409">
-                Azure SDK</a> to run it, but <b>no Azure skills are necessary</b>.<br />
+            You'll need the <a href="http://go.microsoft.com/fwlink/?LinkID=234939&clcid=0x409">Azure SDK</a> to run it, but <b>no Azure skills are necessary</b>.<br />
             Enter the identifier above in the <em>app.config </em>file of the template, then
             open the <em>SpaceshipController</em> code file and edit the <em>ShipLanded()</em>
             method.
