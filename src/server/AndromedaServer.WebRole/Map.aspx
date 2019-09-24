@@ -164,12 +164,14 @@
                             alpha: 0.2,
                         });
                         sensorLayer.add(sensorImage);
+                    }
 
-                        // TODO: has cannon
+                    var cannonRange = ships.GetShipsResult[i].CannonRange;
+                    if (cannonRange > 0) {
                         var piracyImage = new Kinetic.Circle({
                             x: ships.GetShipsResult[i].X,
                             y: ships.GetShipsResult[i].Y,
-                            radius: 20, // if the target is farther than 40 light years, then even though you have him on your sensors, you cannot effectively attack him.
+                            radius: cannonRange / 2, // if the target is farther than 40 light years, then even though you have him on your sensors, you cannot effectively attack him.
                             fill: "#FF0000",
                             alpha: 0.25,
                         });

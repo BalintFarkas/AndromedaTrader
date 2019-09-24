@@ -109,6 +109,7 @@ namespace Andromeda.WebServices
                         Name = Localization.Map_Spaceship + i.Player.PlayerName,
                         Color = (guid != null && i.Player.FirstShipGuid == guid) ? "lightgreen" : "red", //If the Guid is filled (the user has a ship) and this is the player's ship, mark it green, otherwise it's red
                         SensorRange = (guid != null && i.Player.FirstShipGuid == guid) ? i.SensorRangeInLightYears : 0d,
+                        CannonRange = (guid != null && i.Player.FirstShipGuid == guid) ? (i.CannonCount ?? 0) * 20d : 0d,
                         X = (int)coordinates.Item1 / 2,
                         Y = (int)coordinates.Item2 / 2
                     }
